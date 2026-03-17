@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MaLeMa</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <!-- Header -->
+    <header id="header">
+      <div class="header-left" id="header-home-btn">
+        <svg class="logo" viewBox="0 0 140 36" width="140" height="36">
+          <text x="0" y="28" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="28" font-weight="800">
+            <tspan fill="#6c5ce7">M</tspan><tspan fill="#636e72" font-size="20" font-weight="400">a</tspan><tspan fill="#00b894">L</tspan><tspan fill="#636e72" font-size="20" font-weight="400">e</tspan><tspan fill="#e17055">M</tspan><tspan fill="#636e72" font-size="20" font-weight="400">a</tspan>
+          </text>
+        </svg>
+      </div>
+      <div class="header-right">
+        <span class="streak-display" id="streak-display"></span>
+        <span class="star-display" id="star-display">0</span>
+      </div>
+    </header>
+
+    <!-- Home Screen -->
+    <section id="screen-home" class="screen active">
+      <div class="avatar-preview" id="avatar-preview-home"></div>
+      <h2>Was willst du ueben?</h2>
+      <div class="module-grid" id="module-grid"></div>
+      <button class="btn btn-wardrobe" id="btn-wardrobe">Kleiderschrank</button>
+      <button class="btn btn-reset" id="btn-reset">Alles zuruecksetzen</button>
+    </section>
+
+    <!-- Quiz Screen -->
+    <section id="screen-quiz" class="screen">
+      <div class="quiz-header">
+        <span class="quiz-module-name" id="quiz-module-name"></span>
+        <span class="quiz-level" id="quiz-level"></span>
+      </div>
+      <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+      <div class="quiz-problem" id="quiz-problem"></div>
+      <div class="quiz-choices" id="quiz-choices"></div>
+      <div class="quiz-feedback" id="quiz-feedback"></div>
+    </section>
+
+    <!-- Result Screen -->
+    <section id="screen-result" class="screen">
+      <div class="result-content">
+        <h2 id="result-title"></h2>
+        <div class="result-stars" id="result-stars"></div>
+        <p id="result-score"></p>
+        <div class="result-buttons">
+          <button class="btn" id="btn-retry">Nochmal</button>
+          <button class="btn btn-secondary" id="btn-home">Zurueck</button>
+        </div>
+      </div>
+      <canvas id="confetti-canvas"></canvas>
+    </section>
+
+    <!-- Wardrobe Screen -->
+    <section id="screen-wardrobe" class="screen">
+      <h2>Kleiderschrank</h2>
+      <div class="wardrobe-avatar" id="wardrobe-avatar"></div>
+      <div class="wardrobe-action" id="wardrobe-action"></div>
+      <div class="wardrobe-categories" id="wardrobe-categories"></div>
+      <div class="wardrobe-grid" id="wardrobe-grid"></div>
+      <button class="btn btn-secondary" id="btn-wardrobe-back">Zurueck</button>
+    </section>
+  </div>
+
+  <!-- Cat reward overlay -->
+  <div id="cat-overlay" class="cat-overlay hidden">
+    <div class="cat-card">
+      <div class="cat-title" id="cat-title"></div>
+      <img id="cat-img" class="cat-img" alt="Katze"/>
+      <button class="btn" id="cat-close">Weiter</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+  <script src="avatar.js"></script>
+  <script src="modules/addition.js"></script>
+  <script src="modules/subtraction.js"></script>
+  <script src="modules/multiplication.js"></script>
+  <script src="modules/division.js"></script>
+  <script src="modules/zahlenstrahl.js"></script>
+</body>
+</html>
