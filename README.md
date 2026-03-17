@@ -1,4 +1,8 @@
-# MaLeMa — Mathe Lernen fuer Maja
+<p align="center">
+  <img src="logo.svg" alt="MaLeMa" width="220"/>
+  <br/>
+  <em>Mathe Lernen fuer Maja</em>
+</p>
 
 Mathe-Trainer Web-App fuer Grundschueler (3. Klasse). Laeuft im Browser, keine Installation noetig.
 
